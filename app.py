@@ -6,7 +6,6 @@ from PIL import Image
 from torchvision.models import resnet18
 import torchvision.transforms as T
 
-
 st.set_page_config(
     page_title="FSL Demo",
     page_icon=":smiley:",
