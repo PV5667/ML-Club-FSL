@@ -38,7 +38,6 @@ image = st.camera_input("Take your image here")
 
 if image is not None:
     image = Image.open(image)
-    print(image.size)
     image = transforms(image)
     result = output_prediction(image)
     st.title(classes[result])
