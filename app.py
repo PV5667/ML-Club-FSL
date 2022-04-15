@@ -44,7 +44,7 @@ if image is not None:
     image = transforms(image)
     st.write(image.shape)
     result = output_prediction(image)
-    st.write(classes[result])
+    st.title(classes[result])
 
 
 
