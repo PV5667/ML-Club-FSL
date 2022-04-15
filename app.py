@@ -20,8 +20,6 @@ transforms = T.Compose([T.Resize((400)), T.CenterCrop(400), T.ToTensor()])
 backbone = resnet18(pretrained=True)
 backbone.fc = nn.Flatten()
 
-#Load in the prototype vectors
-
 classes = {
     0: "Anish!!!!!!",
     1: "Patrick!!!!",
@@ -42,7 +40,6 @@ if image is not None:
     image = Image.open(image)
     print(image.size)
     image = transforms(image)
-    st.write(image.shape)
     result = output_prediction(image)
     st.title(classes[result])
 
